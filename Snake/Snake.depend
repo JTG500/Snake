@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1512092833 source:c:\users\eric\desktop\snake\snake\main.cpp
+	"Map.h"
+
+1512093002 source:c:\users\eric\desktop\snake\snake\src\map.cpp
+	"Map.h"
+
+1512092833 c:\users\eric\desktop\snake\snake\include\map.h
+	<stdio.h>
+	"Clear.h"
+	"KeyboardEvent.h"
+	<time.h>
+
+1512045153 source:c:\users\eric\desktop\snake\snake\src\clear.cpp
+	"Clear.h"
+
+1511984700 c:\users\eric\desktop\snake\snake\include\clear.h
+	<Windows.h>
+
+1512054325 c:\users\eric\desktop\snake\snake\include\keyboardevent.h
+	<conio.h>
+
+1512054325 source:c:\users\eric\desktop\snake\snake\src\keyboardevent.cpp
+	"KeyboardEvent.h"
+
+1512007794 c:\users\eric\desktop\snake\snake\include\player.h
+	"KeyboardEvent.h"
+
+1512003782 source:c:\users\eric\desktop\snake\snake\src\collision.cpp
+	"Collision.h"
+
+1512004107 c:\users\eric\desktop\snake\snake\include\collision.h
+
+1512007802 source:c:\users\eric\desktop\snake\snake\src\player.cpp
+	"Player.h"
+
+1512047700 c:\users\eric\desktop\snake\snake\include\refresh.h
+	"Clear.h"
+	<stdio.h>
+
+1512049554 source:c:\users\eric\desktop\snake\snake\src\refresh.cpp
+	"Refresh.h"
+
