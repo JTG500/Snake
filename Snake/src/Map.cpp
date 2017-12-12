@@ -15,6 +15,7 @@ void Map::Init()
 
 void Map::DrawMap()
 {
+    printf("\n");
     for (int i = 0; i < MAP_SIZE_X; i++)
     {
         for (int j = 0; j < MAP_SIZE_Y; j++)

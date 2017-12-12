@@ -11,7 +11,7 @@ void Clear::ClearScreen()
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   DWORD                      count;
   DWORD                      cellCount;
-  COORD                      homeCoords = { 0, 0 };
+  COORD                      homeCoords = { 1, 0 };
 
   hStdOut = GetStdHandle( STD_OUTPUT_HANDLE );
   if (hStdOut == INVALID_HANDLE_VALUE) return;
@@ -21,13 +21,11 @@ void Clear::ClearScreen()
   cellCount = csbi.dwSize.X *csbi.dwSize.Y;
 
   /* Fill the entire buffer with spaces */
-  if (!FillConsoleOutputCharacter(
-    hStdOut,
-    (TCHAR) ' ',
-    cellCount,
-    homeCoords,
-    &count
-    )) return;
+  if (!(TCHAR) '#')
+  {
+    if (!FillConsoleOutputCharacter(hStdOut,(TCHAR) ' ',cellCount,homeCoords,&count))
+        return;
+  }
 
   /* Fill the entire buffer with the current colors and attributes */
   if (!FillConsoleOutputAttribute(
@@ -37,7 +35,6 @@ void Clear::ClearScreen()
     homeCoords,
     &count
     )) return;
-
   /* Move the cursor home */
   SetConsoleCursorPosition( hStdOut, homeCoords );
 }
